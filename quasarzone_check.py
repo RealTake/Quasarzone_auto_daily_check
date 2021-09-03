@@ -27,7 +27,6 @@ WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, '//*
 WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="password"]'))).send_keys(pwd)
 time.sleep(2)
 driver.execute_script("document.querySelector('#frm > div > div.top-input-area > p > a').click()")
-
-WebDriverWait(driver, 60).until(EC.visibility_of_element_located((By.CSS_SELECTOR, 'span[onclick^=anttendanceCheck]'))).click()
+driver.execute_script('anttendanceCheck()');
 
 driver.close()
