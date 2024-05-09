@@ -10,10 +10,6 @@ from selenium.webdriver.support import expected_conditions as EC
 
 id = sys.argv[1]
 pwd = sys.argv[2]
-
-print("id", id)
-print("pwd:", pwd)
-
 options = Options()
 
 prefs = {'safebrowsing.enabled': 'True'}
