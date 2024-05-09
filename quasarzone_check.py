@@ -21,7 +21,7 @@ options.add_argument("--safebrowsing-disable-download-protection")
 options.add_argument("--safebrowsing-disable-extension-blacklist")
 options.add_argument("--disable-extensions")
 
-driver = webdriver.Chrome(executable_path=ChromeDriverManager().install(), options=chrome_options)
+driver = webdriver.Chrome(executable_path=ChromeDriverManager().install(), options=options)
 
 def click_by_js(xpath):
     javaScript = """document.evaluate('{0}', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click()""".format(xpath)
